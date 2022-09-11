@@ -30,6 +30,8 @@ THEN I am prompted to select an employee to update and their new role and this i
 # Dependencies:
 
 inquirer@8.2.4
+mysql2
+console.table
 
 
 
