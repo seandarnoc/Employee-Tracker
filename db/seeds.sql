@@ -1,7 +1,7 @@
 insert into department (name_of_department)
 values ("Sales"), ("Operations"), ("Marketing"), ("Engineering"), ("Software"), ("Human Resources");
 
-insert into roles (title, salary, department_id)
+insert into role (title, salary, department_id)
 values ("Sales Manager", 75000.00, 1),
         ("Operations Manager", 70000.00, 2),
         ("Marketing lead", 45000.00, 3),

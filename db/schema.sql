@@ -10,7 +10,7 @@ create table department (
     
 );
 
-create table roles (
+create table role (
     id int not null auto_increment primary key,
     title varchar(30) not null,
     salary decimal(8,2) not null,
@@ -25,9 +25,9 @@ create table employee (
     first_name varchar(30) not null,
     last_name varchar(30) not null,
     role_id int not null,
-    manager_id int null,
+    manager_id int references employee(id),
     foreign key (role_id)
-    references roles(department_id)
+    references role(department_id)
        
     
 );

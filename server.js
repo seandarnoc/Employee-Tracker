@@ -25,3 +25,5 @@ const db = mysql.createConnection(
   },
   console.log(`Connected to the courses_db database.`)
 )
+
+
