@@ -33,6 +33,9 @@ inquirer@8.2.4
 mysql2
 console.table
 
+# Deployment 
+
+npm start
 
 
 # Links

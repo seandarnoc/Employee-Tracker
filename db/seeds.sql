@@ -1,4 +1,4 @@
-insert into department (name_of_department)
+insert into department (name)
 values ("Sales"), ("Operations"), ("Marketing"), ("Engineering"), ("Software"), ("Human Resources");
 
 insert into role (title, salary, department_id)

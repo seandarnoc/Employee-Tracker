@@ -1,11 +1,11 @@
-drop database if exists employeetracker_db;
-create database employeetracker_db;
+drop database if exists employeeTracker_db;
+create database employeeTracker_db;
 
-use employeetracker_db;
+use employeeTracker_db;
 
 create table department (
     id int not null auto_increment primary key,
-    name_of_department varchar(30)  not null
+    name varchar(30)  not null
     
     
 );
