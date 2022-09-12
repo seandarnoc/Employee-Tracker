@@ -41,4 +41,4 @@ npm start
 # Links
 github repo: https://github.com/seandarnoc/Employee-Tracker.git
 
-demo video link: 
+demo video link: https://drive.google.com/file/d/1KxXmoK3Dsd-Sal_3wik3qXHoU196iQLw/view

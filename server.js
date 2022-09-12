@@ -117,15 +117,15 @@ function viewAllEmployees() {
 }
 
 function viewByDepartment() {
-    const query = `SELECT department.name AS department, role.title, employee.id, employee.first_name, employee.last_name
+    const query = `SELECT employee.id, employee.first_name, employee.last_name, department.name AS department, role.title
     FROM employee
     LEFT JOIN role ON (role.id = employee.role_id)
     LEFT JOIN department ON (department.id = role.department_id)
-    ORDER BY department.name;`;
+    ORDER BY employee.id;`;
     connection.query(query, (err, res) => {
         if (err) throw err;
         console.log('\n');
-        console.log('VIEW EMPLOYEE BY DEPARTMENT');
+        console.log('VIEW EMPLOYEES BY DEPARTMENT');
         console.log('\n');
         console.table(res);
         prompt();
@@ -139,7 +139,7 @@ function viewAllDepartment() {
     connection.query(query, (err, res) => {
         if (err) throw err;
         console.log('\n');
-        console.log('VIEW ALL DEPARTMENT');
+        console.log('VIEW ALL DEPARTMENTS');
         console.log('\n');
         console.table(res);
         prompt();
@@ -148,15 +148,14 @@ function viewAllDepartment() {
 
 
 function viewAllRoles() {
-    const query = `SELECT role.title, employee.id, employee.first_name, employee.last_name, department.name AS department
-    FROM employee
-    LEFT JOIN role ON (role.id = employee.role_id)
-    LEFT JOIN department ON (department.id = role.department_id)
-    ORDER BY role.title;`;
+    const query = `SELECT role.title, role.id, department.name, role.salary
+    FROM role
+    INNER JOIN department ON department.id = role.department_id
+    ORDER BY role.department_id;`;
     connection.query(query, (err, res) => {
         if (err) throw err;
         console.log('\n');
-        console.log('VIEW EMPLOYEE BY ROLE');
+        console.log('View All Roles');
         console.log('\n');
         console.table(res);
         prompt();
